@@ -1,0 +1,11 @@
+
+import re
+
+password = input("Enter your password: ")
+
+pattern = r'^(?=.*[A-Z])(?=.*\d)(?=.*[@#$%&*!])[A-Za-z\d@#$%&*!]{8,}$'
+
+if re.match(pattern, password):
+    print("Valid Password")
+else:
+    print("Invalid Password")
